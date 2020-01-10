@@ -9,12 +9,16 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <p>This boilerplate uses gatsby, react hooks, redux and stylus.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <div>
+      <Link to="/example/">Go to example</Link>
+    </div>
+    <div>
+      <Link to="/about/">Go to about</Link>
+    </div>
   </Layout>
 )
 
