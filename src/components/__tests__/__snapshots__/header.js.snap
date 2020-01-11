@@ -23,7 +23,7 @@ exports[`Header renders correctly 1`] = `
     </li>
     <li>
       <a
-        href="/dynamic-route/1578686364540"
+        href="/dynamic-route/1482363367071"
       >
         Dynamic route example
       </a>
