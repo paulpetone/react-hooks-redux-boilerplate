@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<nav
+  className="header"
+>
+  <ul
+    className="header__container"
+  >
+    <li>
+      <a
+        href="/"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        href="/example"
+      >
+        ExampleList
+      </a>
+    </li>
+    <li>
+      <a
+        href="/dynamic-route/1578686364540"
+      >
+        Dynamic route example
+      </a>
+    </li>
+    <li>
+      <a
+        href="/about"
+      >
+        About
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

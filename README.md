@@ -1,4 +1,3 @@
-
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
 <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="50" /><img alt="react" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="80" /><img alt="redux" src="https://res.cloudinary.com/practicaldev/image/fetch/s--heipuOTP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://redux.js.org/img/redux.svg" width="60" /><img alt="stylus" src="https://cdn.freebiesupply.com/logos/large/2x/stylus-logo-png-transparent.png" width="60" />
@@ -8,13 +7,16 @@
 </h1>
 
 ## Local development
-``yarn start``
+
+`yarn start`
 
 ## Static build
-``yarn build``
+
+`yarn build`
 
 ## Serve static folder after build
-``yarn serve``
+
+`yarn serve`
 
 ## 🧐 What's inside?
 

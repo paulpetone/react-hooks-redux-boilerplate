@@ -1,8 +1,8 @@
-import React from 'react'
-import store from './componentStore'
-import handlers from './componentHandlers'
-import state from './componentState'
-import effects from './componentEffects'
+import React from "react"
+import store from "./componentStore"
+import handlers from "./componentHandlers"
+import state from "./componentState"
+import effects from "./componentEffects"
 
 export default () => {
   const { addItem, items } = store()
@@ -13,13 +13,13 @@ export default () => {
   return (
     <>
       <ul>
-        { items.map((item, key) => <li key={`example-${key}`}>{item}</li>) }
+        {items.map((item, key) => (
+          <li key={`example-${key}`}>{item}</li>
+        ))}
       </ul>
       <form onSubmit={handleAddItem({ addItem, inputValue })}>
-        <input onChange={onInputChange({ setInputValue })} type="text"/>
-        <button type="submit">
-          Adicionar item
-        </button>
+        <input onChange={onInputChange({ setInputValue })} type="text" />
+        <button type="submit">Adicionar item</button>
       </form>
     </>
   )

@@ -5,5 +5,5 @@ export default () => ({
   handleAddItem: ({ inputValue, addItem }) => e => {
     e.preventDefault()
     addItem(inputValue)
-  }
+  },
 })

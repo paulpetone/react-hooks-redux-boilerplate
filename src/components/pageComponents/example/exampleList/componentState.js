@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState } from "react"
 
 export default () => {
-  const [inputValue, setInputValue] = useState('')
+  const [inputValue, setInputValue] = useState("")
   return {
     inputValue,
-    setInputValue
+    setInputValue,
   }
 }

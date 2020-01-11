@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import './header.styl'
+import React from "react"
+import { Link } from "gatsby"
+import "./header.styl"
 
-export default () =>
+export default () => (
   <nav className="header">
     <ul className="header__container">
       <li>
@@ -19,3 +19,4 @@ export default () =>
       </li>
     </ul>
   </nav>
+)
