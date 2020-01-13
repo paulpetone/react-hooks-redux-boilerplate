@@ -1,11 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Edit this on gatsby-config.js`,
+    description: `Edit this on gatsby-config.js`,
+    author: `Edit this on gatsby-config.js`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -17,9 +16,9 @@ module.exports = {
       resolve: `gatsby-alias-imports`,
       options: {
         aliases: {
-          components: `src/components`
-        }
-      }
+          components: `src/components`,
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -33,11 +32,10 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-stylus`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-dynamic-routes`,
   ],
 }
