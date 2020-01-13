@@ -27,6 +27,7 @@
     "redux-devtools-extension": "^2.13.8"
   },
   "devDependencies": {
+    "husky": "^4.0.7",
     "prettier": "^1.19.1"
   },
   "keywords": [
