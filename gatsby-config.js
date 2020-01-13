@@ -17,9 +17,9 @@ module.exports = {
       resolve: `gatsby-alias-imports`,
       options: {
         aliases: {
-          components: `src/components`
-        }
-      }
+          components: `src/components`,
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -36,6 +36,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-stylus`,
+    `gatsby-plugin-provide-react`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -1,4 +1,3 @@
-import React from "react"
 import ExampleList from "components/pageComponents/example/exampleList"
 import Layout from "components/layout"
 import SEO from "components/seo"

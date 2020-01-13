@@ -1,4 +1,3 @@
-import React from "react"
 import store from "./store"
 import handlers from "./handlers"
 import state from "./state"
