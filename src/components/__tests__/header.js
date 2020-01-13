@@ -6,7 +6,7 @@ import Header from "../header"
 let _nowFn
 beforeEach(() => {
   _nowFn = Date.now
-  Date.now = jest.fn(() => 1482363367071)
+  Date.now = jest.fn(() => 1482363367072)
 })
 
 afterEach(() => {
