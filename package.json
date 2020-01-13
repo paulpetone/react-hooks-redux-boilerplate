@@ -45,5 +45,10 @@
   "repository": {
     "type": "git",
     "url": "react-hooks-redux-boilerplate"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm format && npm test"
+    }
   }
 }

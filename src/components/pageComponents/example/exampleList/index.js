@@ -1,8 +1,8 @@
 import React from "react"
-import store from "./componentStore"
-import handlers from "./componentHandlers"
-import state from "./componentState"
-import effects from "./componentEffects"
+import store from "./store"
+import handlers from "./handlers"
+import state from "./state"
+import effects from "./effects"
 
 export default () => {
   const { addItem, items } = store()
@@ -12,6 +12,8 @@ export default () => {
 
   return (
     <>
+      This is a example using all u gonna need to create any component, store,
+      handlers, state and effects
       <ul>
         {items.map((item, key) => (
           <li key={`example-${key}`}>{item}</li>
