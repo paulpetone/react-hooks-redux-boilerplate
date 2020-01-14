@@ -1,7 +1,7 @@
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector, useDispatch } from 'react-redux'
 
 const addItemAction = title => {
-  return { type: "ADD_ITEM", title }
+  return { type: 'ADD_ITEM', title }
 }
 
 export default () => {

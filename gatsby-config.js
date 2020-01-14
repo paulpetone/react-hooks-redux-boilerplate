@@ -37,5 +37,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-stylus`,
     `gatsby-plugin-dynamic-routes`,
+    `gatsby-plugin-provide-react`,
   ],
 }
