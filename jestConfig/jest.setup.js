@@ -1,3 +1,7 @@
+import React from 'react'
+
+global.React = React
+
 let _nowFn
 beforeAll(() => {
   _nowFn = Date.now
