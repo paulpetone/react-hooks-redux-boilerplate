@@ -1,5 +1,5 @@
-import { Link } from "gatsby"
-import "./header.styl"
+import { Link } from 'gatsby'
+import './header.styl'
 
 export default () => (
   <nav className="header">
