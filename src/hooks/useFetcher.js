@@ -4,13 +4,13 @@ import { useDispatch } from 'react-redux'
 import fetchDataAction from 'actions/fetchData'
 
 const useFetcher = () => {
-	const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-	const fetcher = ({ key, url }) => {
-		dispatch(fetchDataAction({ dispatch, key, url }))
-	}
+  const fetcher = ({ key, url }) => {
+    dispatch(fetchDataAction({ dispatch, key, url }))
+  }
 
-	return fetcher
+  return fetcher
 }
 
 export default useFetcher
