@@ -5,7 +5,7 @@ const useItems = fetcher => {
   const fetchRepos = () => {
     fetcher({
       key: 'repos',
-      url: 'https://bundafjeifjsis.com',
+      url: 'https://api.github.com/users/paulpetone/repos',
     })
   }
 
