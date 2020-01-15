@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Edit this on gatsby-config.js`,
-    description: `Edit this on gatsby-config.js`,
-    author: `Edit this on gatsby-config.js`,
+    title: `Change this at gatsby-config.js`,
+    description: `Change this at gatsby-config.js`,
+    author: `Change this at gatsby-config.js`,
   },
   plugins: [
     {
@@ -17,6 +17,7 @@ module.exports = {
       options: {
         aliases: {
           components: `src/components`,
+          actions: `src/store/actions`,
         },
       },
     },
@@ -38,5 +39,6 @@ module.exports = {
     `gatsby-plugin-stylus`,
     `gatsby-plugin-dynamic-routes`,
     `gatsby-plugin-provide-react`,
+    `gatsby-plugin-ramda`,
   ],
 }

@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
 
-export default ({ items }) => {
+export default ({ items, fetchRepos }) => {
   useEffect(() => {
     console.log('componentDidMount example')
+    fetchRepos()
   }, [])
 
   useEffect(() => {
