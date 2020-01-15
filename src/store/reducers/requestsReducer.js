@@ -32,13 +32,12 @@ export default (state = INITIAL_STATE, { type, requestData, responseData }) => {
       }
     case 'SET_DATA':
       const { result, responseKey, status } = responseData
-
       return {
         ...state,
         [responseKey]: {
+          ...state[responseKey],
           result,
           status,
-          ...state[responseKey],
         },
       }
     default:

@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { pathOr } from 'ramda'
+import { path, pipe, type } from 'ramda'
 
 const useItems = fetcher => {
   const fetchRepos = () => {
@@ -9,9 +9,15 @@ const useItems = fetcher => {
     })
   }
 
-  const repos = useSelector(state =>
-    pathOr([], ['requests', 'repos', 'result'], state)
-  )
+  const repos = useSelector(state => {
+    const storeRepos = path(['requests', 'repos', 'result'], state)
+    const parsedStoreRepoToArrayIfItsNot = pipe(
+      data => type(data) === 'Array',
+      storeReposIsAnArray => (storeReposIsAnArray ? storeRepos : [])
+    )(storeRepos)
+
+    return parsedStoreRepoToArrayIfItsNot
+  })
 
   return {
     fetchRepos,
