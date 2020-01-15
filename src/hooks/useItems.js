@@ -1,23 +1,21 @@
-import { useSelector } from 'react-redux'
-import { useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 // Actions
 import addItemAction from 'actions/addItem'
 
 const useItems = () => {
-	const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-	const addItem = itemText => {
-		if (itemText.length)
-			dispatch(addItemAction(itemText))
-	}
+  const addItem = itemText => {
+    if (itemText.length) dispatch(addItemAction(itemText))
+  }
 
-	const items = useSelector(state => state.items)
+  const items = useSelector(state => state.items)
 
-	return {
-		items,
-		addItem
-	}
+  return {
+    items,
+    addItem,
+  }
 }
 
 export default useItems
