@@ -1,12 +1,12 @@
 import { createStore, combineReducers } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import itemsReducer from './itemsReducer'
-import anotherReducer from './anotherReducer'
+import itemsReducer from './reducers/itemsReducer'
+import requestsReducer from './reducers/requestsReducer'
 
 const store = createStore(
   combineReducers({
     items: itemsReducer,
-    anotherData: anotherReducer,
+    requests: requestsReducer,
   }),
   composeWithDevTools()
 )

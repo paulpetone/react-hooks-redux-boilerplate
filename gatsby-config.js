@@ -18,6 +18,7 @@ module.exports = {
       options: {
         aliases: {
           components: `src/components`,
+          actions: `src/store/actions`
         },
       },
     },
@@ -37,8 +38,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-stylus`,
     `gatsby-plugin-provide-react`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-ramda`
   ],
 }
