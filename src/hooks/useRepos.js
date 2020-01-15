@@ -1,19 +1,21 @@
 import { useSelector } from 'react-redux'
-import { path, pipe, type } from 'ramda'
+import { path, ifElse, is, always } from 'ramda'
 
 const useItems = fetcher => {
   const fetchRepos = () => {
     fetcher({
       key: 'repos',
-      url: 'https://api.github.com/users/paulpetone/repos',
+      url: 'https://bundafjeifjsis.com',
     })
   }
 
   const repos = useSelector(state => {
     const storeRepos = path(['requests', 'repos', 'result'], state)
-    const parsedStoreRepoToArrayIfItsNot = pipe(
-      data => type(data) === 'Array',
-      storeReposIsAnArray => (storeReposIsAnArray ? storeRepos : [])
+
+    const parsedStoreRepoToArrayIfItsNot = ifElse(
+      is(Array),
+      always(storeRepos),
+      always([])
     )(storeRepos)
 
     return parsedStoreRepoToArrayIfItsNot
