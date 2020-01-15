@@ -18,7 +18,7 @@ module.exports = {
       options: {
         aliases: {
           components: `src/components`,
-          actions: `src/store/actions`
+          actions: `src/store/actions`,
         },
       },
     },
@@ -38,6 +38,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-stylus`,
     `gatsby-plugin-provide-react`,
-    `gatsby-plugin-ramda`
+    `gatsby-plugin-ramda`,
   ],
 }

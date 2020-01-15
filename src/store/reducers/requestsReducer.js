@@ -5,22 +5,25 @@ export default (state = INITIAL_STATE, { type, requestData, responseData }) => {
     case 'FETCH_DATA':
       const { url, key, method, body, dispatch } = requestData
 
-      const fetchData = async() => {
+      const fetchData = async () => {
         const response = await fetch(url, { method, body })
         const result = await response.json()
-        dispatch({ type: 'SET_DATA', responseData: { result, responseKey: key } })
+        dispatch({
+          type: 'SET_DATA',
+          responseData: { result, responseKey: key },
+        })
       }
       fetchData()
 
       return {
         ...state,
-        [key]: ['pending']
+        [key]: ['pending'],
       }
     case 'SET_DATA':
       const { result, responseKey } = responseData
       return {
         ...state,
-        [responseKey]: result
+        [responseKey]: result,
       }
     default:
       return state
