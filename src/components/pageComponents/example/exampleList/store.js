@@ -1,26 +1,30 @@
-import { useSelector, useDispatch } from 'react-redux'
-import addItemAction from 'actions/addItem'
-import fetchDataAction from 'actions/fetchData'
-import R, { pathOr } from 'ramda'
+import { useSelector } from 'react-redux'
+import { pathOr } from 'ramda'
+
+// Hooks
+import useItems from 'hooks/useItems'
+import useFetcher from 'hooks/useFetcher'
 
 export default () => {
-  const dispatch = useDispatch()
+  const { items, addItem } = useItems()
+  const fetcher = useFetcher()
 
-  const addItem = itemText => {
-    dispatch(addItemAction(itemText))
-  }
+  /*
+    "fetchRepos" and "repos" variables could be in a separate hook for reusability
+    Ex:
+      const { repos, fetchRepos } = useRepos()
+
+    ** use the existing hooks at "./src/hooks" as a reference 
+  */
+
   const fetchRepos = () => {
-    dispatch(
-      fetchDataAction({
-        dispatch, // <- I couldn't find any other way :/
-        key: 'repos',
-        url: 'https://api.github.com/users/paulpetone/repos',
-      })
-    )
+    fetcher({
+      key: 'repos',
+      url: 'https://api.github.com/users/paulpetone/repos',
+    })
   }
 
-  const items = useSelector(state => state.items)
-  const repos = useSelector(state => R.pathOr([], ['requests', 'repos'], state))
+  const repos = useSelector(state => pathOr([], ['requests', 'repos'], state))
 
   return {
     addItem,
