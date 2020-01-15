@@ -6,15 +6,15 @@ import addItemAction from 'actions/addItem'
 
 const useItems = () => {
 	const dispatch = useDispatch()
-	
-  const addItem = itemText => {
+
+	const addItem = itemText => {
 		if (itemText.length)
-    	dispatch(addItemAction(itemText))
-  }
+			dispatch(addItemAction(itemText))
+	}
 
 	const items = useSelector(state => state.items)
 
-  return {
+	return {
 		items,
 		addItem
 	}
