@@ -26,8 +26,8 @@ export default (state = INITIAL_STATE, { type, requestData, responseData }) => {
       return {
         ...state,
         [key]: {
-          status: 'pending',
           ...state[key],
+          status: 'pending',
         },
       }
     case 'SET_DATA':
