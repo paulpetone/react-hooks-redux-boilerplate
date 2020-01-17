@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`exampleList renders correctly 1`] = `
+Array [
+  "This is an example using all u gonna need to create any component (store, handlers, state and effects)",
+  <br />,
+  <b>
+    Take a look at components/pageComponents/example/exampleList
+  </b>,
+  <br />,
+  <br />,
+  <br />,
+  <h2>
+    Example 1
+  </h2>,
+  <i>
+    This first 
+    &lt;ul&gt;
+     uses a simple reducer
+  </i>,
+  <ul />,
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      onChange={[Function]}
+      type="text"
+    />
+    <button
+      type="submit"
+    >
+      Add Item
+    </button>
+  </form>,
+  <br />,
+  <br />,
+  <br />,
+  <h2>
+    Example 2
+  </h2>,
+  <i>
+    This second 
+    &lt;ul&gt;
+     uses an async information from store
+  </i>,
+  <ul />,
+]
+`;

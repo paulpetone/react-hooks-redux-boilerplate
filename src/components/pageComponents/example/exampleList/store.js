@@ -1,9 +1,9 @@
 // Page hooks
-import useItems from 'hooks/pageHooks/example/useItems'
-import useRepos from 'hooks/pageHooks/example/useRepos'
+import useItems from '@pageHooks/example/useItems'
+import useRepos from '@pageHooks/example/useRepos'
 
 // General hooks
-import useFetcher from 'hooks/useFetcher'
+import useFetcher from '@hooks/useFetcher'
 
 export default () => {
   const fetcher = useFetcher()

@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux'
 
 // Actions
-import fetchDataAction from 'actions/fetchData'
+import fetchDataAction from '@actions/fetchData'
 
 const useFetcher = () => {
   const dispatch = useDispatch()

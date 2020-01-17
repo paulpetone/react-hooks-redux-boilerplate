@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux'
 
 // Actions
-import addItemAction from 'actions/addItem'
+import addItemAction from '@actions/addItem'
 
 const useItems = () => {
   const dispatch = useDispatch()
