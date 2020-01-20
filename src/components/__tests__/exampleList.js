@@ -1,7 +1,7 @@
-import renderer from 'react-test-renderer'
 import ExampleList from '@pageComponents/example/exampleList'
 import { Provider } from 'react-redux'
 import configureStore from 'redux-mock-store'
+import { render, fireEvent } from '@testing-library/react'
 
 const mockStore = configureStore([])
 
@@ -11,29 +11,29 @@ describe('exampleList', () => {
 
   beforeEach(() => {
     mockedStore = mockStore({
-      items: [],
-      requests: {},
+      items: ['store item']
     })
 
-    component = renderer.create(
+    component = render(
       <Provider store={mockedStore}>
-        <ExampleList />
+        <ExampleList data-testid="teste" />
       </Provider>
-    ).toJSON()
+    )
   })
 
   it('renders correctly', () => {
-    expect(component).toMatchSnapshot()
+    expect(component.baseElement).toMatchSnapshot()
   })
 
   it('add an item', () => {
     mockedStore.dispatch = jest.fn()
+    const { getByText, getByLabelText, findBy } = component
+    const button = getByText('Add Item')
+    const input = getByLabelText('Add Item ->')
 
-    renderer.act(() => {
-      console.log(component.root, 'aqui eu')
-      component.root.findByType('button').props.onClick()
-    });
+    fireEvent.change(input, { target: { value: 'new item' } })
+    fireEvent.click(button, new MouseEvent('click'))
 
-    expect(store.dispatch).toHaveBeenCalledTimes(1)
+    expect(mockedStore.dispatch).toHaveBeenCalledTimes(1)
   })
 })
