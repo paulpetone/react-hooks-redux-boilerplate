@@ -27,7 +27,11 @@ export default () => {
       </ul>
       <form onSubmit={handleAddItem({ addItem, inputValue })}>
         <label htmlFor="example-1">Add Item -></label>
-        <input id="example-1" onChange={onInputChange({ setInputValue })} type="text" />
+        <input
+          id="example-1"
+          onChange={onInputChange({ setInputValue })}
+          type="text"
+        />
         <button type="submit">Add Item</button>
       </form>
       <br />

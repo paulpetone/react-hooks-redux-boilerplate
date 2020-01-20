@@ -11,7 +11,7 @@ describe('exampleList', () => {
 
   beforeEach(() => {
     mockedStore = mockStore({
-      items: ['store item']
+      items: ['store item'],
     })
 
     component = render(
