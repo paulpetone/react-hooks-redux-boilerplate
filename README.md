@@ -47,7 +47,7 @@ For reusable components, you should use `src/components` and create a folder for
 
 Take a look at [https://github.com/paulpetone/react-hooks-redux-boilerplate/tree/master/src/components/pageComponents/example/exampleList](https://github.com/paulpetone/react-hooks-redux-boilerplate/tree/master/src/components/pageComponents/example/exampleList)
 
-Alias: `@components/{youComponentFolder}||{componentIndexJs}`
+Alias: `@components/{yourComponentFolder}||{componentIndexJs}`
 
 ### @pageComponents
 
