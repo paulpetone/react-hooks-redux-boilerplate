@@ -34,6 +34,7 @@ hehehe, only if you like it, of course
 ## Gatsby urls
 
 At `src/pages` you will see all the urls that gatsby renders automatically, so on local development, we have:
+
 - `localhost:8000/`
 - `localhost:8000/about`
 - `localhost:8000/dynamic-route/%someid%`
