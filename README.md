@@ -1,4 +1,3 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
 <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="50" /><img alt="react" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="80" /><img alt="redux" src="https://res.cloudinary.com/practicaldev/image/fetch/s--heipuOTP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://redux.js.org/img/redux.svg" width="60" /><img alt="stylus" src="https://cdn.freebiesupply.com/logos/large/2x/stylus-logo-png-transparent.png" width="60" />
 </p>
@@ -6,20 +5,76 @@
   gatsby + react hooks + redux + stylus
 </h1>
 
+# How to use
+
+## Setup
+```sh
+$ git clone https://github.com/paulpetone/react-hooks-redux-boilerplate.git && cd react-hooks-redux-boilerplate && yarn
+```
+
+not required, but
+`⭐ star this project ⭐`
+hehehe, only if you like it, of course
+
 ## Local development
 
-`yarn start`
+`$ yarn start`
 
 ## Static build
 
-`yarn build`
+`$ yarn build`
 
 ## Serve static folder after build
 
-`yarn serve`
+`$ yarn serve`
 
-## 🧐 What's inside?
 
+# Folder structure idea
+
+## Gatsby urls
+At `src/pages` you will see all the urls that gatsby renders automatically, so on local development, we have:
+`localhost:8000/`
+`localhost:8000/about`
+`localhost:8000/dynamic-route/%someid%`
+`localhost:8000/example`
+`localhost:8000/nvkjncksnjkaxs` -> 404
+
+### @components
+For reusable components, you should use `src/components` and create a folder for this component. Why a folder? Because inside of this folder is where you should put the .styl and logic files, such as effects, handlers, state and store.
+
+Take a look at [https://github.com/paulpetone/react-hooks-redux-boilerplate/tree/master/src/components/pageComponents/example/exampleList](https://github.com/paulpetone/react-hooks-redux-boilerplate/tree/master/src/components/pageComponents/example/exampleList)
+
+Alias: `@components/{youComponentFolder}||{componentIndexJs}`
+
+### @pageComponents
+For each page, we can have reusable components or components that are specific for that url, for this specific components I created a `pageComponents` inside of `src/components`.
+
+You can see here [https://github.com/paulpetone/react-hooks-redux-boilerplate/blob/master/src/pages/example/index.js](https://github.com/paulpetone/react-hooks-redux-boilerplate/blob/master/src/pages/example/index.js) that I'm using a component that is only used by the `localhost:8000/example` page, that's why it is on `src/components/pageComponents/example/exampleList`
+
+Alias: `@pageComponents/{yourPage}/{yourComponent}`
+
+### @hooks
+As we did for components, on hooks root we only have the reusable hooks, Ex: usually a fetcher hook will be used for a lot a components that handles a request, that's why our `src/hooks/useFetcher` is there.
+
+Alias: `@hooks/{yourHook}`
+
+### @pageHooks
+Also, same logic here, if we have some hooks that are used only by a single page, we should put this hooks here: `src/hooks/pageHooks/{yourPage}/{yourHook}`
+
+Alias: `@pageHooks/{yourPage}/{youHook}`
+
+### @actions
+Just another alias for `src/store/actions`
+
+# Husky
+I'm using husky to `format` the code on every `commit` and `test` with jest on every `push`.
+
+# Jest & @testing-library
+It's ready to implement, we have 2 examples on `@components/__tests__`
+
+# About gatsby structure:
+
+##### From gatsby readme:
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
     .
@@ -71,5 +126,3 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 ## 💫 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
