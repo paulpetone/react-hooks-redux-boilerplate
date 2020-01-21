@@ -5,7 +5,7 @@
   gatsby + react hooks + redux + stylus
 </h1>
 
-# How to use
+# 🧶 How to use
 
 ## Setup
 
@@ -14,7 +14,7 @@ $ git clone https://github.com/paulpetone/react-hooks-redux-boilerplate.git && c
 ```
 
 not required, but
-`⭐ star this project ⭐`
+`💫⭐ star this project ⭐💫`
 hehehe, only if you like it, of course
 
 ## Local development
@@ -29,7 +29,7 @@ hehehe, only if you like it, of course
 
 `$ yarn serve`
 
-# Folder structure idea
+# 📁 Folder structure idea
 
 ## Gatsby urls
 
@@ -37,9 +37,9 @@ At `src/pages` you will see all the urls that gatsby renders automatically, so o
 
 - `localhost:8000/`
 - `localhost:8000/about`
-- `localhost:8000/dynamic-route/%someid%`
 - `localhost:8000/example`
-- `localhost:8000/nvkjncksnjkaxs` -> 404
+- `localhost:8000/dynamic-route/%someid%` -> take a look at gatsby-node.js
+- `localhost:8000/nvkjncksnjkaxs` -> 404.js
 
 ### @components
 
@@ -71,17 +71,17 @@ Alias: `@pageHooks/{yourPage}/{youHook}`
 
 ### @actions
 
-Just another alias for `src/store/actions`
+Just an alias for `src/store/actions`
 
-# Husky
+# 🐺 Husky
 
 I'm using husky to `format` the code on every `commit` and `test` with jest on every `push`.
 
-# Jest & @testing-library
+# 🧪 Jest & @testing-library
 
 It's ready to implement, we have 2 examples on `@components/__tests__`
 
-# About gatsby structure:
+# 🚀 About gatsby structure:
 
 ##### From gatsby readme:
 
